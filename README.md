@@ -7,6 +7,4 @@ services:
     restart: always
     ports:
       - "1080:1080"
-    networks:
-      - dockerbr
 ```
