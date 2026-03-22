@@ -9,4 +9,4 @@ RUN pip install --upgrade pip \
     && pip install -e .
 
 EXPOSE 1080
-CMD ["tg-ws-proxy --port 1080 --host 0.0.0.0 -v"]
+CMD tg-ws-proxy --port 1080 --host 0.0.0.0 -v
