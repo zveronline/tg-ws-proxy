@@ -9,4 +9,4 @@ RUN pip install --upgrade pip \
     && pip install -e .
 
 EXPOSE 1443
-CMD tg-ws-proxy --port 1443 --host 0.0.0.0 --secret a2ec93d4ec4ba414ae9afacaf03b79e6 --fake-tls-domain www.citilink.ru
+CMD tg-ws-proxy --port 1443 --host 0.0.0.0 --fake-tls-domain www.citilink.ru
