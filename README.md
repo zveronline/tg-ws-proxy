@@ -7,5 +7,5 @@ services:
     restart: always
     ports:
       - '1443:1443/tcp'
-    command: tg-ws-proxy --port 1443 --host 0.0.0.0 --fake-tls-domain www.citilink.ru
+    command: python -u proxy/tg_ws_proxy.py --port 1443 --host 0.0.0.0 --fake-tls-domain www.citilink.ru
 ```

@@ -10,11 +10,10 @@ RUN pip install --upgrade pip \
 
 FROM python:3.13-alpine AS production-stage
 LABEL maintainer="mail@zveronline.ru"
-RUN apk add --no-cache -U tini ca-certificates
 
 WORKDIR /app
 COPY --from=build-stage /app /app
 COPY --from=build-stage /usr/local/lib/python3.13/site-packages/ /usr/local/lib/python3.13/site-packages/
 
 EXPOSE 1443
-CMD tg-ws-proxy --port 1443 --host 0.0.0.0 --fake-tls-domain www.citilink.ru
+CMD python -u proxy/tg_ws_proxy.py --port 1443 --host 0.0.0.0 --fake-tls-domain www.citilink.ru
