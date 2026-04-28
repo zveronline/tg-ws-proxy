@@ -6,5 +6,5 @@ services:
     image: ghcr.io/zveronline/tg-ws-proxy:latest
     restart: always
     ports:
-      - "1080:1080"
+      - '1443:1443/tcp'
 ```
