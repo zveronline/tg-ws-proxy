@@ -13,7 +13,7 @@ LABEL maintainer="mail@zveronline.ru"
 
 WORKDIR /app
 COPY --from=build-stage /app /app
-COPY --from=build-stage /usr/local/lib/python3.10/site-packages/ /usr/local/lib/python3.10/site-packages/
+COPY --from=build-stage /usr/local/lib/python3.13/site-packages/ /usr/local/lib/python3.13/site-packages/
 
 EXPOSE 1443
 CMD tg-ws-proxy --port 1443 --host 0.0.0.0 --fake-tls-domain www.citilink.ru
