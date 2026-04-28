@@ -10,6 +10,7 @@ RUN pip install --upgrade pip \
 
 FROM python:3.13-alpine AS production-stage
 LABEL maintainer="mail@zveronline.ru"
+RUN apk add --no-cache -U tini ca-certificates
 
 WORKDIR /app
 COPY --from=build-stage /app /app
