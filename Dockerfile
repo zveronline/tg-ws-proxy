@@ -15,5 +15,5 @@ WORKDIR /app
 COPY --from=build-stage /app /app
 COPY --from=build-stage /usr/local/lib/python3.13/site-packages/ /usr/local/lib/python3.13/site-packages/
 
-EXPOSE 1443
-CMD python -u proxy/tg_ws_proxy.py --port 1443 --host 0.0.0.0 --fake-tls-domain www.citilink.ru
+EXPOSE 443
+CMD python -u proxy/tg_ws_proxy.py --port 443 --host 0.0.0.0 --fake-tls-domain www.citilink.ru
