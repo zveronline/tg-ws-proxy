@@ -2,7 +2,7 @@ FROM python:3.13-alpine AS build-stage
 LABEL maintainer="mail@zveronline.ru"
 
 WORKDIR /app
-ADD https://github.com/Flowseal/tg-ws-proxy/archive/refs/tags/v1.6.5.zip /app/proxy.zip
+ADD https://github.com/Flowseal/tg-ws-proxy/archive/refs/tags/v1.6.6.zip /app/proxy.zip
 RUN apk add --no-cache -U unzip gcc musl-dev linux-headers \
     && unzip proxy.zip && rm proxy.zip && mv tg-ws-proxy-*/* ./
 RUN pip install --upgrade pip \
